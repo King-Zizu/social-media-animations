@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+/* TikTok Code The World */
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .25s;
+    color: #1e1e1e;
+    background: linear-gradient(to bottom right, #eefff4 25%,
+                                                 #a0ffd9 50%, 
+                                                 #5c0095 75%,
+                                                 #01072a);
+    background-size: 300% 300%;
+    background-position: top left;
+    transition: background-position 05s;
+}
+input{
+    visibility: hidden;
+}
+label{
+    display: block;
+    height: 2em;
+    width: 3.75em;
+    font-size: 2rem;
+    border: .125em solid currentColor;
+    border-radius: 2em;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+label::before,
+label::after{
+    content:'' ;
+    display: block;
+    border-radius: 1em;
+    position: absolute;
+    z-index: 1;
+}
+label::after{
+    width: 1.125em;
+    height: 1.125em;
+    box-shadow: .25em .25em #5901d8;
+    right: .9em;
+    top: .125em;
+}
+label::before{
+    width: 0.625em;
+    height: 0.625em;
+    background-color: #ffc409;
+    outline: .25em dotted #ffc409;
+    outline-offset: .125em;
+    left: .7em;
+    top: .7em;
+
+}
+span{
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: currentColor;
+    border-radius: 2em;
+    top: .25em;
+    left: .25em;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    transition: left .25s;
+    z-index: 2;
+}
+
+input:checked~label span {
+    left: 2em;
+}
+
+body:has(input:checked) {
+    background-position: 100% 100%;
+    color: #d0d0d0;
+}
+
+nav{
+     font: 1.2em sans-serif;
+}
+
+ul{
+    position: relative;
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    transform: skewY(-13deg);
+    margin-left: 20em;
+    width: 12em;
+  
+}
+li{
+    display: block;
+    position: relative;
+    background: #322f2e;
+    transition: 0.5s;
+} 
+
+li:after{
+    content: "";
+    position: absolute;
+    top: -2em;
+    right: 1.01em;
+    width: 100%;
+    height: 2em;
+    background: inherit;
+    filter: brightness(0.8);
+    transform: skewX(45deg);
+    
+}
+li:before{
+    font-family: "FontAwesome";
+    font-weight: 600;
+    color: #d5ead7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: -1em;
+    left: -2em;
+    width: 2em;
+    height: 100%;
+    background: inherit;
+    filter: brightness(0.6);
+    transform: skewY(45deg);
+}
+i{
+    position: absolute;
+    top: -1em;
+    left: -2em;
+    width: 2em;
+    height: 100%;
+    font-family: "FontAwesome";
+    font-weight: 600;
+    color: #e1b115;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: inherit;
+    filter: brightness(0.6);
+    transform: skewY(45deg);
+    
+
+}
+li:nth-child(1){
+    z-index: calc(4 - 1);
+}
+li:nth-child(2){
+    z-index: calc(4 - 2);
+}
+li:nth-child(3){
+    z-index: calc(4 - 3);
+}
+li:nth-child(3){
+    z-index: calc(4 - 3);
+}
+li:nth-child(4){
+    z-index: calc(4 - 4);
+}
+li:last-child:after{
+    box-shadow: -5em 5em 2em #322f2e;
+}
+a{
+    display: block;
+    padding: 0.5em;
+    color: #d5ead7;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+li:hover{
+    background: var(--clr);
+    transform: translateX(-20%);
+}
